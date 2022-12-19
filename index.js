@@ -2,22 +2,34 @@ let flag = "0";
 const submitButton = document.getElementById("submit-button");
 
 function changeColor(option) {
-    var numOption = parseInt(option.id);
+    
     var element = document.getElementById(option.id);
-    if (numOption >= 2) {
-        var element_2 = document.getElementById( (numOption - 1).toString() );
+    if(option.id == flag ){
         element.style.backgroundColor = "hsl(25, 97%, 53%)";
-        element_2.style.backgroundColor = "hsl(216, 12%, 54%)";
-        element.style.transition = "all 0.1s ease-in-out";
-        element_2.style.transition = "all 0.25s ease-in-out";
-    }
-    element.style.backgroundColor = "hsl(25, 97%, 53%)";
+    } else{
+        element.style.backgroundColor = "hsl(216, 12%, 54%)";
+        //element.style.transition = "all 0.1s ease-in-out";
+
+      }  
 }
 
 function permanent(option){
+    var before = flag
     if (option.id != null){
         flag = option.id;
     }
+
+    if(before == flag){
+     
+    }else{
+        var element = document.getElementById(option.id);
+        var element2 = document.getElementById(before);
+        element.style.backgroundColor = "hsl(25, 97%, 53%)";
+        element2.style.backgroundColor = "hsla(217, 12%, 63%, 0.164)";
+    }
+
+
+
 
 }
 
