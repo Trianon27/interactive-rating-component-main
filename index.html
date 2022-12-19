@@ -2,42 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-widthnitial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+ <!--  <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
 
   <!-- Rating state start -->
 
-  How did we do?
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
+  <div class="card" id="first-card">
+    <section class="image-container">
+      <picture>
+        <img src="images/icon-star.svg" alt="Yellow star, to show the rating options.">
+      </picture>
+    </section>
+    <form>    
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <div class="rating">
+        <label>
+          <input type="radio" name="rating" value="1" >
+          <span class="option-container" id="1" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">1</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="2" >
+          <span class="option-container" id="2" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">2</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="3" >
+          <span class="option-container" id="3" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">3</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="4" >
+          <span class="option-container" id="4" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">4</span>
+        </label>
+        <label>
+          <input type="radio" name="rating" value="5" >
+          <span class="option-container" id="5" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">5</span>
+        </label>
+      </div>
+      <button type="submit" class="submit-bt" onclick="submit()">SUBMIT</button>
+    </form>
+  </div>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
+  <div class="card" id="final-card">
+    <img>
+    <h1>Thank you!</h1>
+    <section>
+      <p>
+        You selected {{value}} out of 5
+      </p>
+    </section>
+    <p>
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>  
+</div>
   <!-- Thank you state end -->
 
   
