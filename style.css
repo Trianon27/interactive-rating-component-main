@@ -102,6 +102,12 @@ body{
     cursor: pointer;
 }
 
+.card .submit-bt:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    transition: .2s ease-in-out;
+
+}
 .rate-results{
     background-color: hsla(217, 12%, 63%, 0.164);
     padding: .2rem 1rem;
