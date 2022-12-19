@@ -1,4 +1,5 @@
 let flag = "0";
+const submitButton = document.getElementById("submit-button");
 
 function changeColor(option) {
     var numOption = parseInt(option.id);
@@ -31,11 +32,25 @@ function unDo (){
     }
 }
 
-function submit(){
-    //take the value of the option selected
-    var value = document.getElementById(flag).value;
-    var card = document.getElementById('first-card');
-    var card2 = document.getElementById('final-card');
-    card = card.style.display = "none";
-    card2 = card2.style.display = "block";
+
+submitButton.addEventListener("click", function(){
+    if (flag == "0"){
+        alert("Please select an option");
+    }else{    
+        var card = document.getElementById('first-card');
+        var card2 = document.getElementById('final-card');
+        card.style.display = "none";
+        card2.style.display = "flex";
+        card2.style.flexDirection = "column";
+        card2.style.justifyContent = "center";
+        card2.style.alignItems = "center";
+        document.getElementById("rate-number").innerHTML = flag;
 }
+        
+
+});
+
+/* 
+    Things that i must do:
+        learn how to make properly a formulary and search how can i improve mi js skills. 
+ */

@@ -27,7 +27,7 @@
         <img src="images/icon-star.svg" alt="Yellow star, to show the rating options.">
       </picture>
     </section>
-    <form>    
+    <form >    
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback is appreciated 
@@ -55,23 +55,28 @@
           <span class="option-container" id="5" onmouseover="changeColor(this)" onclick="permanent(this)"  onmouseout="unDo()">5</span>
         </label>
       </div>
-      <button type="submit" class="submit-bt" onclick="submit()">SUBMIT</button>
     </form>
+    <button  class="submit-bt"  id="submit-button">SUBMIT</button> 
   </div>
+
+    
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
 
   <div class="card" id="final-card">
-    <img>
+    <picture>
+      <img src="images/illustration-thank-you.svg" alt="Show a ilustration that says 'thank you' at the moment of complete the rating">
+    </picture>
+   
     <h1>Thank you!</h1>
-    <section>
+    <section class="rate-results">
       <p>
-        You selected {{value}} out of 5
+        You selected <span id="rate-number"></span> out of 5
       </p>
     </section>
-    <p>
+    <p style="text-align: center;">
       We appreciate you taking the time to give a rating. If you ever need more support, 
       don’t hesitate to get in touch!
     </p>  
@@ -81,7 +86,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Santiago Alexander Rodríguez Triana</a>.
   </div>
 </body>
 </html>

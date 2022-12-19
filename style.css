@@ -101,3 +101,25 @@ body{
     margin: 1rem 0rem;
     cursor: pointer;
 }
+
+.rate-results{
+    background-color: hsla(217, 12%, 63%, 0.164);
+    padding: .2rem 1rem;
+    border-radius: 20px;
+}
+
+.rate-results p{
+    margin-top: .2rem;
+    color: hsl(25, 97%, 53%);
+}
+
+.attribution, .attribution a{
+    color:hsl(0, 0%, 100%)
+}
+
+@media (max-width:480px)  {
+    
+    :root{
+        font-size: 25px;
+    }
+}
